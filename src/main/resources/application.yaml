@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: StudentsApplication
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/learning"
+    username: "root"
+    password: "MyNewPass"
+  flyway:
+    enabled: true
+    check-location: true
+    baseline-version: 0.0
+    locations: classpath:db/migration
+    out-of-order: true
+    baseline-on-migrate: true
+    url: "jdbc:mysql://localhost:3306/"
+    user: "root"
+    password: "MyNewPass"
+    schemas: learning
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  port: 9000
+
+opentracing:
+  jaeger:
+    http-sender:
+      url: "http://jaegerhost:portNumber/api/traces"
+
+# TRACING-settings
+#opentracing:
+#  jaeger:
+#    service-name: AppB
+#    enabled: TRUE
+#    udp-sender:
+#      host: jaeger-agent-host
