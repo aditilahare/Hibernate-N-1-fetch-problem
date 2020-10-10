@@ -1,1 +1,1 @@
-# Hibernate-N-1-fetch-problem
+# Hibernate_N+1_fetch_problem
